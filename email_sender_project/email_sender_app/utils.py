@@ -19,7 +19,8 @@ def send_bulk_email(subject, html_message, email_list):
         msg = EmailMultiAlternatives(
             subject=subject,
             body=plain_message,
-            from_email=settings.EMAIL_HOST_USER,
+            # from_email=settings.EMAIL_HOST_USER,
+            from_email='Tech Creature Solution <techcreaturesolution@gmail.com>',
             to=[email],
         )
         msg.attach_alternative(html_message, "text/html")
